@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/home.css"> <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="../css/menu-styles.css">
+  
+</head>
+<body>
+  <div class="puntos-blancos-image"></div>
+  
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Imagen del encabezado -->
+      <div class="col-12 p-0">
+        <div id="menu-placeholder"></div>
+
+        <script src="../js/menu-boton.js"></script>
+        <script>
+            // Cargar el menú dinámicamente
+            fetch('../components/menu-component.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('menu-placeholder').innerHTML = html;
+        
+                    // Llamar a la función de inicialización del menú
+                    initializeMenu();
+                })
+                .catch(error => console.error('Error cargando el menú:', error));
+        </script>
+        <img src="../images/home/portada-paginaweb.jpg" alt="portada" class="header-image img-fluid w-100">
+        <img src="../images/home/logo-collage.png" alt="logo" class="logo-image">
+        <img src="../images/home/mano.png" alt="mano" class="mano-image img-fluid">
+        <img src="../images/home/señor.png" alt="señor" class="señor-image img-fluid">
+        <h2 class="quienes-somos">¿QUIÉNES SOMOS?</h2>
+        <p class="quienes-somos-p">Somos una dupla de personas apasionadas <br> por el arte con el deseo de compartir recursos que faciliten la creación y experimentación.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <img src="../images/home/tamagochi.png" alt="tamagochi" class="tamagochi-image img-fluid">
+      </div>
+      <div class="col-6">
+        <h2 class="objetivo">OBJETIVO</h2>
+        <p class="objetivo-p">Queremos facilitar tus espacios creativos, con nuestros recursos de forma gratuita y en diferentes formatos según tu necesidad.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h2 class="que-encontraras">¿QUÉ ENCONTRARÁS?</h2>
+        <p class="que-encontraras-p">Imágenes y gifs en formato png y jpg de diferentes temáticas y estéticas,además de una sección para compartir tus collages y apoyarnos en esta comunidad de creativos.</p>
+        <img src="../images/home/boca.png" alt="boca" class="boca-image img-fluid">
+      </div>
+      <div class="col-6 text-center">
+        <img src="../images/home/helado.png" alt="helado" class="helado-image img-fluid">
+        <div class="text-center my-4">
+          <a href="../views/resources.html" class="btn boton-recursos">Recursos</a>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <!-- Bootstrap JS y Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

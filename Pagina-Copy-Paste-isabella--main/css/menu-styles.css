@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.menu-container {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    right: 120px; /* Coloca el menú en la esquina derecha */
+    z-index: 1000;
+}
+
+.menu-icon {
+    width: 90px;
+    height: auto;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(255, 140, 0, 0.9);
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: slideDown 0.3s ease forwards;
+}
+
+.dropdown-item {
+    font-family: 'Roboto';
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f7f7;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.show-menu {
+    display: block;
+}
+
+/* Ajustes del submenú */
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-submenu {
+    background-color: rgba(255, 140, 0, 0.8);
+    border-radius: 15px;
+    margin-top: 15px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.dropdown-item.show-submenu .dropdown-submenu {
+    display: block;
+    max-height: 150px;
+}
+
+.dropdown-submenu-item {
+    font-family: 'Roboto';
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dropdown-submenu-item:hover {
+    background-color: #e6e6e6;
+    text-decoration: none;
+    color: black;
+}
+
+/* Media Queries para pantallas medianas */
+@media (max-width: 768px) {
+    .menu-icon {
+        width: 60px;
+    }
+
+    .dropdown-menu {
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 0;
+    }
+
+    .dropdown-item {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 480px) {
+    .menu-container {
+        top: 10px; /* Ajusta ligeramente la posición superior */
+        right: 10px;
+    }
+
+    .menu-icon {
+        width: 50px;
+    }
+
+    .dropdown-item {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .dropdown-submenu-item {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

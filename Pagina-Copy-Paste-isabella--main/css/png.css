@@ -1,0 +1,125 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFE9B3; /* Fondo de color FFE9B3 */
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/home/puntos-blancos-fondo.png'); /* Imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen en la vista */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    opacity: 0.49; /* Opacidad de la imagen */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+}
+
+.header-container {
+    position: relative; /* Permite posicionar elementos de manera absoluta dentro del contenedor */
+    overflow: hidden;
+}
+
+.header-image {
+    transform: translate(10%, -20%); /* Centra la imagen dentro del contenedor */
+    width: 100%; /* Tamaño de la imagen, ajustable */
+    max-width: 100%;
+    height: auto;
+}
+.text-box {
+    width: 100%;
+    background-color: #E2E2E2; /* Color del fondo del recuadro */
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-size: 1.2rem; /* Tamaño del texto */
+    margin-top: -450px;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: 1px transparent;
+    border-radius: 5.25rem;  
+    transition: border 0.3s ease; /* Transición suave del borde */
+}
+.card:hover {
+    border: 6px solid #FFC176; /* Aumenta el grosor del borde y cambia el color cuando haces hover */
+}
+.image-container {
+    position: relative;
+    border-radius: 65px; /* Bordes redondeados */
+    overflow: hidden; /* Para que el contenido no se salga de los bordes redondeados */
+    width: 100%;
+    height: 300px; /* Ajusta la altura para que todas las imágenes tengan el mismo tamaño */
+    background-color: transparent;
+}
+
+.image-container img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste sin perder proporción */
+    border-radius: 15px; /* Redondea la imagen */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 193, 118, 0.7); /* Fondo semicircular */
+    padding: 10px;
+    border-bottom-left-radius: 15px; /* Bordes semicirculares inferiores */
+    border-bottom-right-radius: 15px;
+
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn {
+    margin-left: 5px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none
+
+}
+
+.btn i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .text-box {
+        font-size: 1rem; /* Ajuste del tamaño del texto para pantallas más pequeñas */
+        padding: 20px 10px;
+        margin-top: -100px; /* Ajuste para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .text-box {
+        font-size: 0.9rem; /* Texto más pequeño en móviles */
+        margin-top: -50px;
+    }
+}
